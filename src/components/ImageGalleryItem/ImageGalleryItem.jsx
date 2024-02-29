@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 
 import { Modal } from '../Modal/Modal';
 
@@ -7,9 +7,9 @@ import styles from './styles.module.css';
 export const ImageGalleryItem = ({ smallImgSrc, largeImgSrc, tags }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const closeModal = useCallback(() => {
+  const closeModal = () => {
     setIsModalOpen(false);
-  }, []);
+  };
 
   return (
     <>
